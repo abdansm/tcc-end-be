@@ -16,7 +16,13 @@ module.exports = (sequelize, DataTypes) => {
   Member.init({
     nama: DataTypes.STRING,
     nik: DataTypes.STRING,
-    alamat: DataTypes.STRING
+    alamat: DataTypes.STRING,
+    map_url: {
+    type: DataTypes.STRING,
+    validate: {
+      isUrl: true
+    }
+  }
   }, {
     sequelize,
     modelName: 'Member',

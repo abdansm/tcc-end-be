@@ -30,6 +30,9 @@ module.exports = {
                 alamat :{
                     type: "string",
                     min: 1,
+                },
+                map_url :{
+                    type: "url",
                 }
                 
             }
@@ -38,7 +41,8 @@ module.exports = {
             let memberCreateObj = {
                 nama : req.body.nama,
                 nik : req.body.nik,
-                alamat : req.body.alamat
+                alamat : req.body.alamat,
+                map_url : req.body.map_url
             }
 
             //validasi menggunakan module fastest-validator
@@ -142,7 +146,8 @@ module.exports = {
             let memberUpdateObj = {
                 nama : req.body.nama,
                 nik : req.body.nik,
-                alamat : req.body.alamat
+                alamat : req.body.alamat,
+                map_url : req.body.map_url
             }
 
             //validasi menggunakan module fastest-validator
